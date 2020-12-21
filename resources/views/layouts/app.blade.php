@@ -29,7 +29,12 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="flex flex-wrap bg-gray-100 w-full h-screen">
+                    @include('layouts.sidebar')
+                    <div class="w-10/12">
+                        {{ $slot }}
+                    </div>
+                </div>
             </main>
         </div>
     </body>
