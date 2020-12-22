@@ -8,7 +8,7 @@ class ContentLayout extends Component
 {
     public $header = '';
 
-    public function __construct($header)
+    public function __construct($header = '')
     {
         $this->header = $header;
     }

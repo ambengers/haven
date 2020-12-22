@@ -17,19 +17,19 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-200">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
-            <header class="bg-indigo-300">
+            {{-- <header class="bg-blue-400">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     {{ $header }}
                 </div>
-            </header>
+            </header> --}}
 
             <!-- Page Content -->
             <main>
-                <div class="flex flex-wrap bg-gray-100 w-full h-screen">
+                <div class="flex flex-wrap bg-gray-200 w-full h-screen">
                     @include('layouts.sidebar')
                     <div class="w-10/12">
                         {{ $slot }}

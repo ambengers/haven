@@ -3,7 +3,7 @@
         <li>
             <a
                 href="{{ route('situations.index') }}"
-                class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-indigo-100 focus:shadow-outline {{ request()->routeIs('situations.*') ? 'bg-indigo-100' : '' }}"
+                class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-indigo-200 focus:shadow-outline {{ request()->routeIs('situations.*') ? 'bg-indigo-200' : '' }}"
             >
                 <span class="text-gray-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
