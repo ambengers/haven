@@ -9,5 +9,20 @@ class Situation extends Haven
     use HasFactory;
 
     const OPEN = 'open';
-    const close = 'close';
+    const CLOSED = 'closed';
+
+    const FLOOD = 'flood';
+    const TYPHOON = 'typhoon';
+    const FIRE = 'fire';
+    const EARTHQUAKE = 'earthquake';
+
+    public static function types()
+    {
+        return [
+            self::FLOOD,
+            self::TYPHOON,
+            self::FIRE,
+            self::EARTHQUAKE,
+        ];
+    }
 }
