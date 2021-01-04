@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <livewire:styles />
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-200">
@@ -37,5 +37,8 @@
                 </div>
             </main>
         </div>
+
+        <livewire:scripts />
+        <script src="{{ asset('js/app.js') }}" defer></script>
     </body>
 </html>
