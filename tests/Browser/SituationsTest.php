@@ -20,7 +20,7 @@ class SituationsTest extends DuskTestCase
         $this->browse(function (Browser $browser) use ($user) {
             $browser->login()
                     ->visit(new CreateSituation)
-                    ->assertSee('Open a Situation');
+                    ->assertSee('Create Situation');
         });
     }
 }
