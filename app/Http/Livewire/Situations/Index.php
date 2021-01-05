@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Situations;
 
 use Livewire\Component;
 use App\Models\Situation;
+use App\Filters\SituationFilters;
 
 class Index extends Component
 {
@@ -11,11 +12,15 @@ class Index extends Component
 
     protected $queryString = ['search'];
 
-    public $situations = [];
+    public $situations;
 
     public function render()
     {
-        $this->situations = Situation::all();
+        $filters = app(SituationFilters::class)->parameters([
+            'search' => $this->search,
+        ]);
+
+        $this->situations = Situation::filter($filters);
 
         return view('livewire.situations.index');
     }
