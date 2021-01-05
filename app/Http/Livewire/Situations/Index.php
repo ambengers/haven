@@ -12,14 +12,16 @@ class Index extends Component
 
     protected $queryString = ['search'];
 
+    public $situations;
+
     public function render()
     {
         $filters = app(SituationFilters::class)->parameters([
             'search' => $this->search,
         ]);
 
-        return view('livewire.situations.index', [
-            'situations' => Situation::filter($filters),
-        ]);
+        $this->situations = Situation::filter($filters);
+
+        return view('livewire.situations.index');
     }
 }
