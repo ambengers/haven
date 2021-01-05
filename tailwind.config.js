@@ -3,6 +3,10 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
     purge: ['./storage/framework/views/*.php', './resources/views/**/*.blade.php'],
 
+    corePlugins: {
+        ringColor: false,
+    },
+
     theme: {
         extend: {
             fontFamily: {
@@ -17,5 +21,5 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    // plugins: [require('@tailwindcss/forms')],
 };
