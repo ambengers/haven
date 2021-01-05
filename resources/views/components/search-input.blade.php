@@ -6,5 +6,6 @@
         placeholder="Search"
         type="search"
         class="appearance-none outline-none rounded-full w-full h-10 leading-normal pl-12 border-2 border-transparent"
+        {{ $attributes }}
     >
 </div>

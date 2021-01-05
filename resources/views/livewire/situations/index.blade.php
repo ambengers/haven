@@ -2,7 +2,7 @@
 
     <x-content-header>Situations</x-content-header>
     <div class="flex bg-gray-200 pb-6">
-        <x-search-input></x-search-input>
+        <x-search-input wire:model="search"></x-search-input>
         <div class="flex w-full justify-end">
             <x-button-link href="{{ route('situations.create') }}">Create Situation</x-button-link>
         </div>

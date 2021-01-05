@@ -7,6 +7,10 @@ use App\Models\Situation;
 
 class Index extends Component
 {
+    public $search;
+
+    protected $queryString = ['search'];
+
     public $situations = [];
 
     public function render()
