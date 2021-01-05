@@ -5,6 +5,6 @@
     <input
         placeholder="Search"
         type="search"
-        class="appearance-none outline-none rounded-full w-full h-10 leading-normal pl-16 border-2 border-transparent focus:border-blue-500"
+        class="appearance-none outline-none rounded-full w-full h-10 leading-normal pl-16 border-2 border-transparent ml-1"
     >
 </div>
