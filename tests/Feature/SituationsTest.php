@@ -23,11 +23,16 @@ class SituationsTest extends TestCase
     /** @test */
     public function can_list_all_situations()
     {
-        $situations = Situation::factory(2)->create();
+        [$first, $last] = Situation::factory(2)->create();
 
         Livewire::test(Index::class)
             ->assertViewIs('livewire.situations.index')
-            ->assertSee($situations->first()->title);
+            ->assertSee($first->title)
+            ->assertSee($first->type)
+            ->assertSee($first->status)
+            ->assertSee($last->title)
+            ->assertSee($last->type)
+            ->assertSee($last->status);
     }
 
     /** @test */

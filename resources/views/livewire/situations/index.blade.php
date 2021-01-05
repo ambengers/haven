@@ -21,7 +21,7 @@
                         <th class="text-left">Title</th>
                         <th class="text-left">Type</th>
                         <th class="text-left">Status</th>
-                        <th class="text-left">Actions</th>
+                        <th class="w-32">&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,6 +35,13 @@
                         <td>{{ $situation->title }}</td>
                         <td>{{ $situation->type }}</td>
                         <td>{{ $situation->status }}</td>
+                        <td>
+                            <div class="inline-flex items-center">
+                                <x-view-link href="/situations/{{ $situation->id }}"></x-view-link>
+                                <x-edit-link href="/situations/{{ $situation->id }}/edit"></x-edit-link>
+                                <x-delete-button></x-delete-button>
+                            </div>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
