@@ -1,32 +1,45 @@
 <x-content-layout>
 
     <x-content-header>Situations</x-content-header>
-    <div class="flex bg-gray-200">
+    <div class="flex bg-gray-200 pb-6">
         <x-search-input></x-search-input>
-        <div class="flex w-full justify-end my-6">
+        <div class="flex w-full justify-end">
             <x-button-link href="{{ route('situations.create') }}">Create Situation</x-button-link>
         </div>
     </div>
 
     <div>
-        <table class="table-auto">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Type</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($situations as $situation)
-                <tr>
-                    <td>{{ $situation->title }}</td>
-                    <td>{{ $situation->type }}</td>
-                    <td>{{ $situation->status }}</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+        <div class="py-4 px-3">
+            Filters goes here..
+        </div>
+        <div>
+            <table class="table w-full">
+                <thead>
+                    <tr class="bg-gray-300">
+                        <th class="w-16 py-4 px-3 text-center">&nbsp;</th>
+                        <th class="text-left">ID</th>
+                        <th class="text-left">Title</th>
+                        <th class="text-left">Type</th>
+                        <th class="text-left">Status</th>
+                        <th class="text-left">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($situations as $situation)
+                    <tr>
+
+                        <td class="w-16 py-4 px-3">
+                            <x-checkbox value="{{ $situation->id }}"></x-checkbox>
+                        </td>
+                        <td>{{ $situation->id }}</td>
+                        <td>{{ $situation->title }}</td>
+                        <td>{{ $situation->type }}</td>
+                        <td>{{ $situation->status }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </x-content-layout>
